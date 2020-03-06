@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://game/scale_view.gd" type="Script" id=1]
+[ext_resource path="res://game/board.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" type="HBoxContainer"]
+mouse_filter = 2
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+margin_right = 600.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 600, 600 )
+rect_clip_content = true
+mouse_filter = 2
+mouse_default_cursor_shape = 3
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="ViewportContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 800, 800 )
+color = Color( 0.137255, 0.137255, 0.258824, 1 )
+
+[node name="Board" parent="ViewportContainer" instance=ExtResource( 2 )]
+position = Vector2( -2.39166, -2.39166 )
+scale = Vector2( 0.55, 0.55 )

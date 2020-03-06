@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://game/octo.gd" type="Script" id=1]
+[ext_resource path="res://pics/util/whitering.png" type="Texture" id=2]
+[ext_resource path="res://pics/chars/Sneaks-blue.png" type="Texture" id=3]
+[ext_resource path="res://pics/util/blue_light.png" type="Texture" id=4]
+[ext_resource path="res://pics/util/button_light.png" type="Texture" id=5]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Scalebox" type="Node2D" parent="."]
+
+[node name="back" type="Sprite" parent="Scalebox"]
+position = Vector2( 4.62655, 3.70122 )
+scale = Vector2( 1.86979, 1.70323 )
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Scalebox"]
+texture = ExtResource( 3 )
+
+[node name="BBut" type="Sprite" parent="Scalebox"]
+position = Vector2( 62.921, -5.55185 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 4 )
+
+[node name="GBut" type="Sprite" parent="Scalebox"]
+position = Vector2( 61.0703, 40.7136 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 5 )
+
+[node name="Tween" type="Tween" parent="."]

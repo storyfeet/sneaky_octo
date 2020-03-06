@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://game/board.gd" type="Script" id=1]
+[ext_resource path="res://game/tileboard.tscn" type="PackedScene" id=2]
+
+[node name="Board" type="Node2D"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 1 )
+
+[node name="Tilemap" parent="." instance=ExtResource( 2 )]
+script = null
+
+[node name="OctoArea" type="Node2D" parent="."]
+
+[node name="FishArea" type="Node2D" parent="."]
+position = Vector2( -7.21008, 0 )
+
+[node name="PathView" type="Node2D" parent="."]
